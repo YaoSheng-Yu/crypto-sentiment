@@ -1,9 +1,7 @@
-streamlit>=1.24.0
-pandas>=1.5.0
-plotly>=5.13.0
-requests>=2.31.0
-transformers>=4.35.0
-torch>=2.1.0
-numpy>=1.24.0
-sentencepiece>=0.1.99
-protobuf>=4.25.0
+requests==2.31.0
+pandas==2.1.4
+transformers==4.36.1
+torch==2.1.2
+numpy==1.26.2
+streamlit==1.29.0
+plotly==5.18.0

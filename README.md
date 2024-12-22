@@ -1,54 +1,29 @@
-# Crypto Sentiment Analysis Dashboard
+# Crypto Sentiment Analysis
 
-A real-time cryptocurrency sentiment analysis dashboard that tracks market sentiment through news articles.
+Automated crypto news sentiment analysis that runs every 12 hours.
 
 ## Features
-
-- Automated news fetching from MediaStack API
-- Sentiment analysis using FinBERT and RoBERTa models
-- Interactive dashboard for sentiment visualization
-- Daily updates of crypto-related news
-- Historical sentiment tracking
+- Fetches latest crypto news from MediaStack API
+- Analyzes sentiment using FinBERT
+- Automatically updates every 12 hours
+- Stores historical data in monthly JSON files
+- Tracks sentiment scores in CSV format
 
 ## Setup
 
-1. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+1. Fork this repository
+2. Add your MediaStack API key:
+   - Go to repository Settings > Secrets
+   - Add new secret named `MEDIASTACK_API_KEY`
+   - Paste your API key as the value
 
-2. Set up your MediaStack API key in `config.py`
+## Data Files
+- `data/[YEAR][MONTH].json`: Monthly news articles
+- `sentiment_scores.csv`: Historical sentiment scores
 
-3. Initialize the data directory:
-```bash
-python scripts/setup_directories.py
-```
-
-4. Run the dashboard:
-```bash
-python app.py
-```
-
-## Project Structure
-
-- `app.py`: Main dashboard application
-- `scripts/`
-  - `fetch_news.py`: News fetching script
-  - `analyze_sentiment.py`: Sentiment analysis script
-  - `update_data.py`: Data update automation
-- `data/`: JSON files containing news articles and sentiment scores
-- `models/`: Sentiment analysis models and utilities
-- `static/`: Dashboard static files
-- `templates/`: Dashboard HTML templates
-
-## Automated Updates
-
-The project includes automated scripts for:
-- Daily news fetching
-- Sentiment analysis
-- Data updates
-- GitHub synchronization
-
-## License
-
-MIT License
+## Automatic Updates
+The GitHub Action runs every 12 hours to:
+1. Fetch new crypto news articles
+2. Analyze their sentiment
+3. Update the data files
+4. Commit changes back to the repository
