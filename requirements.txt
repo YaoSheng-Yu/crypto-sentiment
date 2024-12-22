@@ -1,7 +1,6 @@
 requests==2.31.0
 pandas==2.1.4
-transformers==4.36.1
-torch==2.1.2
+textblob==0.17.1
 numpy==1.26.2
 streamlit==1.29.0
 plotly==5.18.0

@@ -1,11 +1,21 @@
 import json
 import pandas as pd
-from transformers import pipeline
+from textblob import TextBlob
 import logging
 from pathlib import Path
 import os
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+def get_sentiment(text):
+    analysis = TextBlob(text)
+    # Convert polarity to our sentiment categories
+    if analysis.sentiment.polarity > 0.1:
+        return 'positive', abs(analysis.sentiment.polarity)
+    elif analysis.sentiment.polarity < -0.1:
+        return 'negative', abs(analysis.sentiment.polarity)
+    else:
+        return 'neutral', abs(analysis.sentiment.polarity)
 
 def analyze_new_articles():
     try:
@@ -22,23 +32,20 @@ def analyze_new_articles():
             logging.info("No articles found in temp.json")
             return
             
-        # Initialize sentiment analyzer
-        sentiment_analyzer = pipeline("sentiment-analysis", model="ProsusAI/finbert")
-        
         # Process each article
         new_scores = []
         for article in articles:
             # Analyze title and description
-            title_score = sentiment_analyzer(article['title'])[0]
-            desc_score = sentiment_analyzer(article.get('description', ''))[0] if article.get('description') else None
+            title_sentiment, title_score = get_sentiment(article['title'])
+            desc_sentiment, desc_score = get_sentiment(article.get('description', '')) if article.get('description') else (None, 0)
             
-            # Calculate overall sentiment
-            sentiment = title_score['label']
-            score = title_score['score']
-            
-            if desc_score:
-                sentiment = desc_score['label'] if desc_score['score'] > score else sentiment
-                score = max(score, desc_score['score'])
+            # Use the stronger sentiment
+            if desc_score > title_score:
+                sentiment = desc_sentiment
+                score = desc_score
+            else:
+                sentiment = title_sentiment
+                score = title_score
             
             # Create score entry
             new_scores.append({
