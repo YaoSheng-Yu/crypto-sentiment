@@ -1,0 +1,12 @@
+{
+    "positive": [
+        "bullish", "surge", "rally", "gain", "rise", "up", "high", "growth", "profit", "success",
+        "adoption", "innovation", "partnership", "development", "launch", "upgrade", "support",
+        "investment", "opportunity", "potential", "strong", "secure", "stable", "confidence"
+    ],
+    "negative": [
+        "bearish", "crash", "drop", "fall", "down", "low", "loss", "decline", "risk", "fail",
+        "scam", "hack", "fraud", "ban", "regulation", "restriction", "warning", "concern",
+        "volatile", "uncertainty", "weak", "threat", "problem", "crisis"
+    ]
+}
