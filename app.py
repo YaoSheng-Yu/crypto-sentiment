@@ -39,12 +39,12 @@ CRYPTO_STOP_WORDS = STOP_WORDS | {
 }
 
 # Add cache with TTL of 5 minutes
-@st.cache_data(ttl=300, hash_funcs={pd.DataFrame: lambda _: None})
+@st.cache_data(ttl=300)
 def load_and_process_data():
     """Load and process sentiment data from local file"""
     try:
-        # Read local CSV file
-        df = pd.read_csv('sentiment_scores.csv')
+        # Read local CSV file with encoding that handles special characters
+        df = pd.read_csv('sentiment_scores.csv', encoding='latin1')
         
         # Convert date column to datetime
         df['date'] = pd.to_datetime(df['date'])
@@ -139,10 +139,6 @@ def create_alerts(sentiment_df):
 
 def create_dashboard():
     st.set_page_config(page_title="Crypto News Sentiment Dashboard", layout="wide")
-    
-    if st.button('🔄 Refresh Data'):
-        st.cache_data.clear()
-        st.rerun()
     
     st.title("Crypto News Sentiment Analysis Dashboard")
     st.markdown("---")
