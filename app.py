@@ -35,7 +35,7 @@ CRYPTO_STOP_WORDS = STOP_WORDS | {
     'bitcoin', 'btc', 'crypto', 'cryptocurrency', 'cryptocurrencies', 'blockchain',
     'token', 'tokens', 'coin', 'coins', 'digital', 'currency', 'currencies',
     'mining', 'miner', 'miners', 'wallet', 'wallets', 'exchange', 'exchanges',
-    'trading', 'trader', 'traders', 'market', 'markets', 'price', 'prices'
+    'trading', 'trader', 'traders', 'market', 'markets', 'price', 'prices', '2024'
 }
 
 # Add cache with TTL of 5 minutes
@@ -214,15 +214,20 @@ def create_dashboard():
             sentiment_emoji = "🟢" if row['score'] > 0.1 else "🔴" if row['score'] < -0.1 else "⚪"
             # Clean and format the title
             title = row['title']
-            # Remove quotes
-            title = title.strip('"')
-            # Fix parentheses spacing
-            title = re.sub(r'\(\s*', ' (', title)
-            title = re.sub(r'\s*\)', ') ', title)
-            # Remove any vertical spacing or special characters
-            title = re.sub(r'[\n\r\t\f\v]', ' ', title)
-            # Fix multiple spaces
+            
+            # First remove quotes if present
+            if title.startswith('"') and title.endswith('"'):
+                title = title[1:-1]
+            
+            # Fix spacing around parentheses
+            title = re.sub(r'\s*\(\s*', ' (', title)
+            title = re.sub(r'\s*\)\s*', ') ', title)
+            
+            # Fix multiple spaces and remove unwanted characters
             title = re.sub(r'\s+', ' ', title)
+            title = ' '.join(word for word in title.split() if not all(c.isupper() for c in word))
+            
+            # Final cleanup
             title = title.strip()
             
             st.markdown(f"{sentiment_emoji} {title}  \n*{row['date'].strftime('%Y-%m-%d')} • Sentiment: {row['score']:.3f}*")
