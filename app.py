@@ -213,7 +213,18 @@ def create_dashboard():
         for _, row in recent_df.iterrows():
             sentiment_emoji = "🟢" if row['score'] > 0.1 else "🔴" if row['score'] < -0.1 else "⚪"
             # Clean and format the title
-            title = row['title'].replace('\n', ' ').strip()
+            title = row['title']
+            # Fix parentheses spacing
+            title = re.sub(r'\(\s*', ' (', title)
+            title = re.sub(r'\s*\)', ') ', title)
+            # Remove any vertical spacing or special characters
+            title = re.sub(r'[\n\r\t\f\v]', ' ', title)
+            # Fix multiple spaces
+            title = re.sub(r'\s+', ' ', title)
+            # Clean up any remaining special characters
+            title = re.sub(r'[^\w\s\(\),\$\.-]', '', title)
+            title = title.strip()
+            
             st.markdown(f"{sentiment_emoji} {title}  \n*{row['date'].strftime('%Y-%m-%d')} • Sentiment: {row['score']:.3f}*")
     
     # Main Chart
