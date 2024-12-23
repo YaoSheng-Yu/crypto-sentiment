@@ -118,25 +118,6 @@ def extract_topic_words(df):
     keyword_counts = Counter(keywords)
     return keyword_counts.most_common(5)
 
-def create_alerts(sentiment_df):
-    """Generate alerts based on significant changes in sentiment"""
-    alerts = []
-    
-    # Sentiment change alerts
-    recent_sentiment = sentiment_df.iloc[-3:]
-    if len(recent_sentiment) > 1 and abs(recent_sentiment['score'].diff().iloc[-1]) > 0.2:
-        alerts.append(f"Significant sentiment shift detected: {recent_sentiment['score'].iloc[-1]:.2f}")
-    
-    # Moving average alerts
-    if sentiment_df['MA3'].iloc[-1] > sentiment_df['MA7'].iloc[-1] and \
-       sentiment_df['MA3'].iloc[-2] <= sentiment_df['MA7'].iloc[-2]:
-        alerts.append("Short-term sentiment crossing above medium-term")
-    elif sentiment_df['MA3'].iloc[-1] < sentiment_df['MA7'].iloc[-1] and \
-         sentiment_df['MA3'].iloc[-2] >= sentiment_df['MA7'].iloc[-2]:
-        alerts.append("Short-term sentiment crossing below medium-term")
-    
-    return alerts
-
 def create_dashboard():
     st.set_page_config(page_title="Crypto News Sentiment Dashboard", layout="wide")
     
@@ -322,13 +303,6 @@ def create_dashboard():
     )
     
     st.plotly_chart(fig, use_container_width=True)
-    
-    # Alerts
-    alerts = create_alerts(daily_sentiment)
-    if alerts:
-        st.markdown("### ⚠️ Alerts")
-        for alert in alerts:
-            st.warning(alert)
     
     # Hot Topics
     st.markdown("---")
