@@ -215,24 +215,27 @@ def create_dashboard():
             # Clean and format the title
             title = row['title']
             
-            # First remove quotes if present
-            if title.startswith('"') and title.endswith('"'):
-                title = title[1:-1]
+            # Remove extra spaces around special characters
+            title = re.sub(r'\s*:\s*', ': ', title)  # Normalize spacing around colons
+            title = re.sub(r'\s*\$\s*', '$', title)  # Normalize spacing around dollar signs
             
-             # Fix spacing around parentheses
+            # Ensure symbols (e.g., $, ?, :) are correctly spaced
+            title = re.sub(r'([^\w\s])([a-zA-Z])', r'\1 \2', title)  # Add space after symbols
+            
+            # Fix spacing around parentheses
             title = re.sub(r'\s*\(\s*', ' (', title)
             title = re.sub(r'\s*\)\s*', ') ', title)
             
-            # Remove excessive line breaks and tabs
+            # Remove excess line breaks and tabs
             title = re.sub(r'[\n\t\r]+', ' ', title)
             
             # Fix multiple spaces
             title = re.sub(r'\s+', ' ', title)
             
-            # Allow valid uppercase words (like BTC, ETH)
-            allowed_uppercase = {"BTC", "ETH", "NASDAQ", "NYSE", "USD"}
+            # Capitalize standalone uppercase words while preserving abbreviations
+            allowed_uppercase = {"BTC", "ETH", "NASDAQ", "NYSE", "SOL"}
             title = ' '.join(
-                word if word in allowed_uppercase or not word.isupper() else word.capitalize()
+                word if word in allowed_uppercase else word.capitalize() if word.isupper() else word
                 for word in title.split()
             )
             
