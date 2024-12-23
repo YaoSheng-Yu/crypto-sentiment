@@ -219,13 +219,26 @@ def create_dashboard():
             if title.startswith('"') and title.endswith('"'):
                 title = title[1:-1]
             
-            # Fix spacing around parentheses
+             # Fix spacing around parentheses
             title = re.sub(r'\s*\(\s*', ' (', title)
             title = re.sub(r'\s*\)\s*', ') ', title)
             
-            # Fix multiple spaces and remove unwanted characters
+            # Remove excessive line breaks and tabs
+            title = re.sub(r'[\n\t\r]+', ' ', title)
+            
+            # Fix multiple spaces
             title = re.sub(r'\s+', ' ', title)
-            title = ' '.join(word for word in title.split() if not all(c.isupper() for c in word))
+            
+            # Allow valid uppercase words (like BTC, ETH)
+            allowed_uppercase = {"BTC", "ETH", "NASDAQ", "NYSE", "USD"}
+            title = ' '.join(
+                word if word in allowed_uppercase or not word.isupper() else word.capitalize()
+                for word in title.split()
+            )
+            
+            # Truncate overly long titles (e.g., over 100 characters)
+            if len(title) > 100:
+                title = title[:97] + "..."
             
             # Final cleanup
             title = title.strip()
