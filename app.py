@@ -212,10 +212,9 @@ def create_dashboard():
         recent_df = df.sort_values('date', ascending=False).head(5)
         for _, row in recent_df.iterrows():
             sentiment_emoji = "🟢" if row['score'] > 0.1 else "🔴" if row['score'] < -0.1 else "⚪"
-            st.markdown(f"""
-            {sentiment_emoji} [{row['title']}]({row['url']})  
-            *{row['date'].strftime('%Y-%m-%d')} • Sentiment: {row['score']:.3f}*
-            """)
+            # Clean and format the title
+            title = row['title'].replace('\n', ' ').strip()
+            st.markdown(f"{sentiment_emoji} {title}  \n*{row['date'].strftime('%Y-%m-%d')} • Sentiment: {row['score']:.3f}*")
     
     # Main Chart
     st.markdown("---")
@@ -250,9 +249,25 @@ def create_dashboard():
     )
     
     # Add election day vertical line (November 7, 2024)
-    election_date = pd.Timestamp('2024-11-07')
-    fig.add_vline(x=election_date, line_dash="dash", line_color="red",
-                 annotation_text="Election Day", annotation_position="top right")
+    fig.add_shape(
+        type="line",
+        x0="2024-11-07",
+        x1="2024-11-07",
+        y0=0,
+        y1=1,
+        yref="paper",
+        line=dict(color="red", width=1, dash="dash")
+    )
+    
+    # Add election day annotation
+    fig.add_annotation(
+        x="2024-11-07",
+        y=1,
+        yref="paper",
+        text="Election Day",
+        showarrow=False,
+        yshift=10
+    )
     
     fig.update_layout(
         height=400,
