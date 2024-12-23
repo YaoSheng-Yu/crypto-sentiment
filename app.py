@@ -69,12 +69,19 @@ def load_and_process_data():
 
 def get_sentiment_status(sentiment_df):
     """Determine overall sentiment status based on current sentiment and trends"""
-    latest = sentiment_df.iloc[-1]
-    
+    if len(sentiment_df) < 2:
+        return "NEUTRAL", 50, "Not enough data for trend analysis"
+        
     # Get current sentiment score
-    current_sentiment = latest['score']
-    short_trend = latest['MA3'] - latest['MA7']
-    medium_trend = latest['MA7'] - latest['MA7'].shift(1)
+    current_sentiment = sentiment_df['score'].iloc[-1]
+    
+    # Calculate trends using the last two values
+    ma3_current = sentiment_df['MA3'].iloc[-1]
+    ma7_current = sentiment_df['MA7'].iloc[-1]
+    ma7_prev = sentiment_df['MA7'].iloc[-2]
+    
+    short_trend = ma3_current - ma7_current
+    medium_trend = ma7_current - ma7_prev
     
     # Scoring system (0-100)
     base_score = (current_sentiment + 1) * 50  # Convert -1 to 1 range to 0-100
