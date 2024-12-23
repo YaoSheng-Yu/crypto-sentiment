@@ -206,24 +206,22 @@ def create_dashboard():
             <div style='margin-bottom: 12px; color: {"green" if ma7_value > 0 else "red"}'>{ma7_value:.3f}</div>
             """, unsafe_allow_html=True)
     
-    # Hot Topics
+    # Recent Articles
     with col3:
-        st.subheader("Hot Topics (Last 7 Days)")
-        topics = extract_topic_words(df)
-        if topics:
-            for word, count in topics:
-                st.markdown(f"• **{word}** ({count} mentions)")
-        else:
-            st.write("No topics found")
+        st.subheader("Recent Articles")
+        recent_df = df.sort_values('date', ascending=False).head(5)
+        for _, row in recent_df.iterrows():
+            sentiment_emoji = "🟢" if row['score'] > 0.1 else "🔴" if row['score'] < -0.1 else "⚪"
+            st.markdown(f"""
+            {sentiment_emoji} [{row['title']}]({row['url']})  
+            *{row['date'].strftime('%Y-%m-%d')} • Sentiment: {row['score']:.3f}*
+            """)
     
     # Main Chart
     st.markdown("---")
     st.subheader("Sentiment Trend Analysis")
     
-    fig = make_subplots(rows=2, cols=1, 
-                       shared_xaxes=True,
-                       vertical_spacing=0.1,
-                       row_heights=[0.7, 0.3])
+    fig = make_subplots(rows=1, cols=1)
     
     # Sentiment line
     fig.add_trace(
@@ -231,8 +229,7 @@ def create_dashboard():
                   y=daily_sentiment['score'],
                   mode='lines',
                   name='Daily Sentiment',
-                  line=dict(color='gray', width=1)),
-        row=1, col=1
+                  line=dict(color='gray', width=1))
     )
     
     # Moving averages
@@ -241,8 +238,7 @@ def create_dashboard():
                   y=daily_sentiment['MA3'],
                   mode='lines',
                   name='3-Day MA',
-                  line=dict(color='blue', width=2)),
-        row=1, col=1
+                  line=dict(color='blue', width=2))
     )
     
     fig.add_trace(
@@ -250,32 +246,24 @@ def create_dashboard():
                   y=daily_sentiment['MA7'],
                   mode='lines',
                   name='7-Day MA',
-                  line=dict(color='orange', width=2)),
-        row=1, col=1
+                  line=dict(color='orange', width=2))
     )
     
-    # Add volume-like bar chart for article count
-    daily_articles = df.groupby('date').size()
-    fig.add_trace(
-        go.Bar(x=daily_articles.index,
-               y=daily_articles.values,
-               name='Article Count',
-               marker_color='lightgray'),
-        row=2, col=1
-    )
+    # Add election day vertical line (November 7, 2024)
+    election_date = pd.Timestamp('2024-11-07')
+    fig.add_vline(x=election_date, line_dash="dash", line_color="red",
+                 annotation_text="Election Day", annotation_position="top right")
     
     fig.update_layout(
-        height=600,
+        height=400,
         showlegend=True,
         plot_bgcolor='white',
         margin=dict(t=0),
         yaxis=dict(title='Sentiment Score',
                   gridcolor='lightgray',
                   zerolinecolor='lightgray'),
-        yaxis2=dict(title='Article Count',
-                   gridcolor='lightgray'),
-        xaxis2=dict(title='Date',
-                   gridcolor='lightgray'),
+        xaxis=dict(title='Date',
+                  gridcolor='lightgray'),
         hovermode='x unified'
     )
     
@@ -288,17 +276,17 @@ def create_dashboard():
         for alert in alerts:
             st.warning(alert)
     
-    # Recent Articles
+    # Hot Topics
     st.markdown("---")
-    st.subheader("Recent Articles")
-    
-    recent_df = df.sort_values('date', ascending=False).head(10)
-    for _, row in recent_df.iterrows():
-        sentiment_emoji = "🟢" if row['score'] > 0.1 else "🔴" if row['score'] < -0.1 else "⚪"
-        st.markdown(f"""
-        {sentiment_emoji} [{row['title']}]({row['url']})  
-        *{row['date'].strftime('%Y-%m-%d')} • Sentiment: {row['score']:.3f}*
-        """)
+    st.subheader("Hot Topics (Last 7 Days)")
+    topics = extract_topic_words(df)
+    if topics:
+        cols = st.columns(5)
+        for i, (word, count) in enumerate(topics):
+            with cols[i]:
+                st.markdown(f"**{word}**  \n{count} mentions")
+    else:
+        st.write("No topics found")
     
     # Footer
     st.markdown("---")
