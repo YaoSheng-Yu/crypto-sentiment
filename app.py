@@ -215,12 +215,18 @@ def create_dashboard():
             # Clean and format the title
             title = row['title']
             
+            # Handle the problematic title specifically
+            if "WhatsNext" in title:
+                title = title.replace("WhatsNext", "Whats Next")
+            
+            # Remove quotes if they wrap the entire title
+            if title.startswith('"') and title.endswith('"'):
+                title = title[1:-1]
+            
             # Remove extra spaces around special characters
             title = re.sub(r'\s*:\s*', ': ', title)  # Normalize spacing around colons
             title = re.sub(r'\s*\$\s*', '$', title)  # Normalize spacing around dollar signs
-            
-            # Ensure symbols (e.g., $, ?, :) are correctly spaced
-            title = re.sub(r'([^\w\s])([a-zA-Z])', r'\1 \2', title)  # Add space after symbols
+            title = re.sub(r'\s*\?\s*', '? ', title)  # Normalize spacing around question marks
             
             # Fix spacing around parentheses
             title = re.sub(r'\s*\(\s*', ' (', title)
@@ -234,14 +240,15 @@ def create_dashboard():
             
             # Capitalize standalone uppercase words while preserving abbreviations
             allowed_uppercase = {"BTC", "ETH", "NASDAQ", "NYSE", "SOL"}
-            title = ' '.join(
-                word if word in allowed_uppercase else word.capitalize() if word.isupper() else word
-                for word in title.split()
-            )
-            
-            # Truncate overly long titles (e.g., over 100 characters)
-            if len(title) > 100:
-                title = title[:97] + "..."
+            words = []
+            for word in title.split():
+                if word in allowed_uppercase:
+                    words.append(word)
+                elif word.isupper() and len(word) > 1:
+                    words.append(word.capitalize())
+                else:
+                    words.append(word)
+            title = ' '.join(words)
             
             # Final cleanup
             title = title.strip()
