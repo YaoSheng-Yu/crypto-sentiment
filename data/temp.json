@@ -1,29 +1,47 @@
 [
     {
-        "title": "India must not shy away from crypto regulations: CoinDCX CEO says",
-        "description": "Over 90 per cent of domestic crypto transaction volumes shifted offshore, roughly around Rs ₹6 lakh crore.",
-        "url": "https://www.thehindubusinessline.com/money-and-banking/india-must-not-shy-away-from-crypto-regulations-coindcx-ceo-says/article69100847.ece",
+        "title": "Ripple’s XRP breaks $3 for first time since 2018, nears all-time high",
+        "description": "XRP surged 12% on speculation that Trump’s administration will support Ripple and the crypto industry.",
+        "url": "https://fortune.com/crypto/2025/01/16/ripples-xrp-breaks-3-for-first-time-since-2018-nears-all-time-high/",
         "source": {
-            "name": "Business Line"
+            "name": "Fortune"
         },
-        "published_at": "2025-01-16T04:21:38+00:00"
+        "published_at": "2025-01-16T21:57:23+00:00"
     },
     {
-        "title": "Capital Investment Advisors LLC Invests $371,000 in iShares Bitcoin Trust (NASDAQ:IBIT)",
-        "description": "Capital Investment Advisors LLC acquired a new position in shares of iShares Bitcoin Trust (NASDAQ:IBIT - Free Report) in the 4th quarter, according to the company in its most recent 13F filing with the SEC. The fund acquired 6,992 shares of the company's stock, valued at approximately $371,000. Se",
-        "url": "https://www.marketbeat.com/instant-alerts/capital-investment-advisors-llc-invests-371000-in-ishares-bitcoin-trust-nasdaqibit-2025-01-16/",
+        "title": "A First-Day Trump Order: A Federal Stockpile of Bitcoin?",
+        "description": "The cryptocurrency industry has pushed President-elect Donald J. Trump to establish one, creating real political momentum behind the plan.",
+        "url": "https://www.nytimes.com/2025/01/16/technology/trump-bitcoin-stockpile.html",
         "source": {
-            "name": "lulegacy"
+            "name": "The New York Times"
         },
-        "published_at": "2025-01-16T08:23:05+00:00"
+        "published_at": "2025-01-16T16:14:26+00:00"
     },
     {
-        "title": "North Korea stole $659 million in crypto assets last year, the US says",
-        "description": "The United States, Japan and South Korea have issued a warning against North Korean threat actors, who are actively and aggressively targeting the cryptocurrency industry. In their joint advisory, the countries said threat actor groups affiliated with the Democratic People&#39;s Republic of Korea (DPRK) continue to stage numerous cybercrime campaigns to steal cryptocurrency. Those bad actors — including the Lazarus hacking group, which the US believes has been deploying cyber attacks all over the world since 2009 — target \"exchanges, digital asset custodians and individual users.\" And...",
-        "url": "https://www.engadget.com/cybersecurity/north-korea-stole-659-million-in-crypto-assets-last-year-the-us-says-133029741.html?src=rss",
+        "title": "Short interest rises in 7 crypto stocks during December",
+        "description": "Short interest rises in 7 crypto stocks during December",
+        "url": "https://seekingalpha.com/news/4395496-7-crypto-stocks-report-increase-in-short-interest-in-december?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
         "source": {
-            "name": "Engadget"
+            "name": "Seeking Alpha"
         },
-        "published_at": "2025-01-15T13:30:29+00:00"
+        "published_at": "2025-01-16T15:23:40+00:00"
+    },
+    {
+        "title": "XRP Witnesses Epic Breakout Versus Bitcoin and Ethereum",
+        "description": "XRP Witnesses Epic Breakout Versus Bitcoin and Ethereum",
+        "url": "https://www.investing.com/news/cryptocurrency-news/xrp-witnesses-epic-breakout-versus-bitcoin-and-ethereum-3817383",
+        "source": {
+            "name": "Investing.com | Stock Market Quotes &amp; Financial News"
+        },
+        "published_at": "2025-01-16T19:00:23+00:00"
+    },
+    {
+        "title": "Bitcoin Flirts With $100,000 Level As Angst Over Fed Path Eases",
+        "description": "Bitcoin Flirts With $100,000 Level As Angst Over Fed Path Eases",
+        "url": "https://www.ndtvprofit.com/bitcoin/bitcoin-flirts-with-100000-level-as-angst-over-fed-path-eases",
+        "source": {
+            "name": "Bloomberg | Latest And Live Business"
+        },
+        "published_at": "2025-01-16T13:09:21+00:00"
     }
 ]
