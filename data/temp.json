@@ -1,47 +1,47 @@
 [
     {
-        "title": "Coinbase says the SEC has agreed to drop its crypto lawsuit",
-        "description": "On Friday morning Coinbase announced that SEC staff have “agreed in principle to dismiss its unlawful enforcement case against Coinbase, subject to Commissioner approval.” CEO Brian Armstrong called it “great news” in a post on X, saying it would be a full dismissal with no fines paid and no business changes while thanking the Trump administration. Under the direction of Gary Gensler, the SEC argued that some crypto assets should be governed under securities laws, which firms like Coinbase opposed, saying it needs new rules. Neither his post nor the one from Coinbase mentioned the...",
-        "url": "https://www.theverge.com/news/617221/coinbase-sec-lawsuit-ending-agree-in-principle",
+        "title": "Big Day for Crypto Goes South After Bybit Hack",
+        "description": "Hours after Coinbase said the S.E.C. was dropping a lawsuit against it, another major cryptocurrency exchange reported a potentially record-setting theft.",
+        "url": "https://www.nytimes.com/2025/02/22/technology/crypto-exchange-bybit-hack.html",
         "source": {
-            "name": "The Verge"
+            "name": "The New York Times"
         },
-        "published_at": "2025-02-21T15:08:28+00:00"
+        "published_at": "2025-02-22T10:02:06+00:00"
     },
     {
-        "title": "Nano Labs prices unregistered sale of equity securities, increases Bitcoin holdings to 400",
-        "description": "Nano Labs prices unregistered sale of equity securities, increases Bitcoin holdings to 400",
-        "url": "https://seekingalpha.com/news/4411884-nano-labs-prices-unregistered-sale-of-equity-securities-increases-bitcoin-holdings-to-400?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
-        "source": {
-            "name": "Seeking Alpha"
-        },
-        "published_at": "2025-02-21T13:01:49+00:00"
-    },
-    {
-        "title": "Bybit Hack, Crypto’s Biggest Ever, Spoils Coinbase’s SEC Victory Party",
-        "description": "The crypto industry started its Friday in a jubilant mood, with Coinbase Global Inc.’s announcement that US securities regulators were poised to dismiss a legal case against the nation’s largest digital-asset exchange.",
-        "url": "https://financialpost.com/pmn/business-pmn/bybit-hack-cryptos-biggest-ever-spoils-coinbases-sec-victory-party",
-        "source": {
-            "name": "Financial Post | Canada Business News"
-        },
-        "published_at": "2025-02-22T00:23:13+00:00"
-    },
-    {
-        "title": "Brian Armstrong says Coinbase spent $50M fighting SEC lawsuit – and beat it",
-        "description": "Coinbase on Friday said the SEC has agreed to drop the lawsuit against the company with prejudice, meaning it cannot be filed again.&#160; The move, which is still subject to the approval of the SEC’s Commissioners, is yet another signal that the Trump administration plans to be more friendly to crypto than the SEC was [&#8230;]© 2024 TechCrunch. All rights reserved. For personal use only.",
-        "url": "https://techcrunch.com/2025/02/21/brian-armstrong-says-coinbase-spent-50m-fighting-sec-lawsuit-and-beat-it/",
-        "source": {
-            "name": "TechCrunch"
-        },
-        "published_at": "2025-02-21T22:38:22+00:00"
-    },
-    {
-        "title": "Bitcoin Key Indicator Signals Major Move on Horizon: Potential Scenarios",
-        "description": "Bitcoin Key Indicator Signals Major Move on Horizon: Potential Scenarios",
-        "url": "https://www.investing.com/news/cryptocurrency-news/bitcoin-key-indicator-signals-major-move-on-horizon-potential-scenarios-3884323",
+        "title": "Bitcoin price today: climbs for 3rd straight day to $98.3k; macro worries persist",
+        "description": "Bitcoin price today: climbs for 3rd straight day to $98.3k; macro worries persist",
+        "url": "https://www.investing.com/news/cryptocurrency-news/bitcoin-price-today-rises-for-3rd-straight-day-to-984k-macro-worries-persist-3882568",
         "source": {
             "name": "Investing.com | Stock Market Quotes &amp; Financial News"
         },
-        "published_at": "2025-02-21T18:00:22+00:00"
+        "published_at": "2025-02-21T15:32:34+00:00"
+    },
+    {
+        "title": "Fed Might Turn Hawkish as Crypto on Rise, Bloomberg's Mike McGlone Hints",
+        "description": "Fed Might Turn Hawkish as Crypto on Rise, Bloomberg's Mike McGlone Hints",
+        "url": "https://www.investing.com/news/cryptocurrency-news/fed-might-turn-hawkish-as-crypto-on-rise-bloombergs-mike-mcglone-hints-3884495",
+        "source": {
+            "name": "Investing.com | Stock Market Quotes &amp; Financial News"
+        },
+        "published_at": "2025-02-21T21:00:27+00:00"
+    },
+    {
+        "title": "Bitcoin (BTC) Surges to $100,000: 3 Key Levels Next, Will XRP Follow Bullish Wave? Dogecoin (DOGE) in Very Difficult Position",
+        "description": "Bitcoin (BTC) Surges to $100,000: 3 Key Levels Next, Will XRP Follow Bullish Wave? Dogecoin (DOGE) in Very Difficult Position",
+        "url": "https://www.investing.com/news/cryptocurrency-news/bitcoin-btc-surges-to-100000-3-key-levels-next-will-xrp-follow-bullish-wave-dogecoin-doge-in-very-difficult-position-3884932",
+        "source": {
+            "name": "Investing.com | Stock Market Quotes &amp; Financial News"
+        },
+        "published_at": "2025-02-22T05:00:19+00:00"
+    },
+    {
+        "title": "Crypto exchange Bybit says it was hacked and lost around $1.4 billion",
+        "description": "Crypto exchange Bitby disclosed a breach that that amounts to a loss of $1.4 billion, the largest crypto theft of all time. © 2024 TechCrunch. All rights reserved. For personal use only.",
+        "url": "https://techcrunch.com/2025/02/21/crypto-exchange-bybit-says-it-was-hacked-and-lost-around-1-4-billion/",
+        "source": {
+            "name": "TechCrunch"
+        },
+        "published_at": "2025-02-21T18:00:33+00:00"
     }
 ]
