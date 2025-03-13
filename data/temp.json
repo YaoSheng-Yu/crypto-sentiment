@@ -1,11 +1,47 @@
 [
     {
-        "title": "Bitdeer Technologies mines 110 bitcoins in February",
-        "description": "Bitdeer Technologies mines 110 bitcoins in February",
-        "url": "https://seekingalpha.com/news/4419712-bitdeer-technologies-mines-110-bitcoins-in-february?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
+        "title": "Bitcoin price today: climbs near $82k after cooler-than-expected inflation data",
+        "description": "Bitcoin price today: climbs near $82k after cooler-than-expected inflation data",
+        "url": "https://www.investing.com/news/cryptocurrency-news/bitcoin-price-today-inches-higher-to-81k-as-tariffs-recession-jitters-weigh-3922696",
+        "source": {
+            "name": "Investing.com | Stock Market Quotes &amp; Financial News"
+        },
+        "published_at": "2025-03-12T15:06:09+00:00"
+    },
+    {
+        "title": "Donald Trump Jr. has been boosting MAGA-related startups",
+        "description": "Since Donald Trump Jr. joined VC firm 1789 Capital after his father won the election, he&#8217;s been busy monetizing the Make America Great Again (MAGA) ecosystem. He’s been making bets in media, pharmaceutical, guns, and crypto while pushing against environmental, social, and governance (ESG) and diversity, equity, and inclusion (DEI), the Financial Times reported. The [&#8230;]© 2024 TechCrunch. All rights reserved. For personal use only.",
+        "url": "https://techcrunch.com/2025/03/12/donald-trump-jr-has-been-boosting-maga-related-startups/",
+        "source": {
+            "name": "TechCrunch"
+        },
+        "published_at": "2025-03-12T17:37:41+00:00"
+    },
+    {
+        "title": "YieldMax Crypto Industry & Tech Portfolio Option Income ETF declares $0.4173 dividend",
+        "description": "YieldMax Crypto Industry & Tech Portfolio Option Income ETF declares $0.4173 dividend",
+        "url": "https://seekingalpha.com/news/4419917-yieldmax-crypto-industry-and-tech-portfolio-option-income-etf-declares-0_4173-dividend?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
         "source": {
             "name": "Seeking Alpha"
         },
-        "published_at": "2025-03-12T11:10:28+00:00"
+        "published_at": "2025-03-12T16:37:35+00:00"
+    },
+    {
+        "title": "Terrett departs Fox Business to co-host crypto podcast",
+        "description": "Fox Business Network reporter Eleanor Terrett has left the network to co-host &#8220;Crypto In America,&#8221; a weekly podcast and newsletter. The other co-hosts are Jacquelyn Melinek and Gerald Gallagher. The first episode launches March 19. &#8220;In addition to my work with Crypto In America, I’ll also be rolling out my own expanded content later this year to [&#8230;]",
+        "url": "https://talkingbiznews.com/media-news/terrett-departs-fox-business-to-co-host-crypto-podcast/",
+        "source": {
+            "name": "Talking Biz News"
+        },
+        "published_at": "2025-03-12T15:31:14+00:00"
+    },
+    {
+        "title": "Trump is diving into crypto headfirst. Has China missed the boat?",
+        "description": "During his first term in office, US President Donald Trump decried the utility of bitcoin and other cryptocurrencies, saying their value was based on \"thin air\". But since his campaign for a second term - which put him back in the White House in January - he has taken on a decidedly different tone. Trump gathered CEOs and investors for a first-ever White House summit dedicated to digital assets on Friday, where he stated the country would be the \"crypto capital of the world\". Do you have questio",
+        "url": "https://ca.finance.yahoo.com/news/trump-diving-crypto-headfirst-china-093000322.html",
+        "source": {
+            "name": "sports"
+        },
+        "published_at": "2025-03-12T09:30:00+00:00"
     }
 ]
