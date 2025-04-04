@@ -1,29 +1,47 @@
 [
     {
-        "title": "Mysterious $90 Million BTC Leaves Biggest Crypto Exchange",
-        "description": "Mysterious $90 Million BTC Leaves Biggest Crypto Exchange",
-        "url": "https://www.investing.com/news/cryptocurrency-news/mysterious-90-million-btc-leaves-biggest-crypto-exchange-3964103",
+        "title": "Riot Platforms March bitcoin production increases 13%",
+        "description": "Riot Platforms March bitcoin production increases 13%",
+        "url": "https://seekingalpha.com/news/4428622-riot-platforms-march-bitcoin-production-increases-13?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
         "source": {
-            "name": "Investing.com | Stock Market Quotes &amp; Financial News"
+            "name": "Seeking Alpha"
         },
-        "published_at": "2025-04-03T02:30:16+00:00"
+        "published_at": "2025-04-03T21:01:13+00:00"
     },
     {
-        "title": "U.S. crypto stocks slide as Trump's sweeping tariffs jolt markets",
-        "description": "U.S. crypto stocks slide as Trump's sweeping tariffs jolt markets",
-        "url": "https://www.investing.com/news/stock-market-news/us-crypto-stocks-slide-as-trumps-sweeping-tariffs-jolt-markets-3964424",
-        "source": {
-            "name": "Investing.com | Stock Market Quotes &amp; Financial News"
-        },
-        "published_at": "2025-04-03T09:46:41+00:00"
-    },
-    {
-        "title": "GameStop now has $1.5 billion to splurge on a Bitcoin reserve after private offering",
-        "description": "The video game retailer is expanding from selling video games to also investing in Bitcoin.",
-        "url": "https://fortune.com/crypto/2025/04/02/gamestop-bitcoin-reserve-private-offering/",
+        "title": "Bitcoin, broader crypto market slump as Trump unveils unprecedented tariff package",
+        "description": "The sprawling list of levies targets dozens of countries ranging from China to Madagascar.",
+        "url": "https://fortune.com/crypto/2025/04/03/bitcoin-crypto-market-trump-tariff-package/",
         "source": {
             "name": "Fortune"
         },
-        "published_at": "2025-04-02T16:51:22+00:00"
+        "published_at": "2025-04-03T17:14:07+00:00"
+    },
+    {
+        "title": "Riot Platforms produces 13% more bitcoin in March vs. February",
+        "description": "Riot Platforms produces 13% more bitcoin in March vs. February",
+        "url": "https://seekingalpha.com/news/4428620-riot-platforms-produces-13-more-bitcoin-in-march-vs-february?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
+        "source": {
+            "name": "Seeking Alpha"
+        },
+        "published_at": "2025-04-03T21:06:20+00:00"
+    },
+    {
+        "title": "Death Cross Strikes XRP With 18% Plunge Warning Versus Bitcoin",
+        "description": "Death Cross Strikes XRP With 18% Plunge Warning Versus Bitcoin",
+        "url": "https://www.investing.com/news/cryptocurrency-news/death-cross-strikes-xrp-with-18-plunge-warning-versus-bitcoin-3966320",
+        "source": {
+            "name": "Investing.com | Stock Market Quotes &amp; Financial News"
+        },
+        "published_at": "2025-04-03T18:30:17+00:00"
+    },
+    {
+        "title": "Amazon, OnlyFans creator and crypto company bid for TikTok as deadline looms",
+        "description": "Zoop, a startup run by OnlyFans founder Tim Stokely, reportedly partnered with a cryptocurrency company to make a late-stage bid",
+        "url": "https://www.independent.co.uk/news/world/americas/us-politics/trump-tiktok-final-deal-amazon-bytedance-b2726203.html",
+        "source": {
+            "name": "The Independent"
+        },
+        "published_at": "2025-04-03T16:05:58+00:00"
     }
 ]
