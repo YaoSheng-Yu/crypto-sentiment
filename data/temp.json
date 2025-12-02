@@ -1,20 +1,47 @@
 [
     {
-        "title": "Bitcoin, Ethereum fall sharply as crypto sell-off resumes",
-        "description": "Bitcoin and Ethereum saw heavy selling at the start of a new month, resuming the recent turbulence in digital assets.",
-        "url": "https://www.cnbc.com/2025/12/01/bitcoin-ethereum-fall-sharply-as-crypto-sell-off-resumes-.html",
+        "title": "ASX set to advance, crypto slump threatens Wall Street’s streak",
+        "description": "US stocks are giving back some of last week’s rally on Monday as bitcoin falls again.",
+        "url": "https://www.theage.com.au/business/markets/asx-set-to-advance-crypto-slump-threatens-wall-street-s-streak-20251202-p5njze.html?ref=rss&utm_medium=rss&utm_source=rss_business",
         "source": {
-            "name": "CNBC"
+            "name": "The Age"
         },
-        "published_at": "2025-12-01T08:19:53+00:00"
+        "published_at": "2025-12-01T18:22:08+00:00"
     },
     {
-        "title": "Bitcoin Slides More Than 5% As Crypto Selloff Resumes",
-        "description": "Bitcoin briefly dropped below $86,000 early on Monday, reversing the recovery it mounted last week following its worst month since the 2021 crypto crash.",
-        "url": "https://www.forbes.com/sites/siladityaray/2025/12/01/bitcoin-slides-more-than-5-as-crypto-selloff-resumes/",
+        "title": "Crypto Under Pressure, But 'Rich Dad Poor Dad' Author Recommends Buying Bitcoin — Here's Why",
+        "description": "Crypto Under Pressure, But 'Rich Dad Poor Dad' Author Recommends Buying Bitcoin — Here's Why",
+        "url": "https://www.ndtvprofit.com/crypto/crypto-under-pressure-but-rich-dad-poor-dad-author-recommends-buying-bitcoin-heres-why",
         "source": {
-            "name": "Forbes"
+            "name": "Bloomberg | Latest And Live Business"
         },
-        "published_at": "2025-12-01T10:16:31+00:00"
+        "published_at": "2025-12-01T12:27:20+00:00"
+    },
+    {
+        "title": "ASX set to advance, crypto slump threatens Wall Street’s streak",
+        "description": "US stocks are giving back some of last week’s rally on Monday as bitcoin falls again.",
+        "url": "https://www.smh.com.au/business/markets/asx-set-to-advance-crypto-slump-threatens-wall-street-s-streak-20251202-p5njze.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
+        "source": {
+            "name": "The Sydney Morning Herald"
+        },
+        "published_at": "2025-12-01T18:22:08+00:00"
+    },
+    {
+        "title": "ASX set to advance, crypto slump threatens Wall Street’s streak",
+        "description": "US stocks are giving back some of last week’s rally on Monday as bitcoin falls again.",
+        "url": "https://www.theage.com.au/business/markets/asx-set-to-advance-crypto-slump-threatens-wall-street-s-streak-20251202-p5njze.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
+        "source": {
+            "name": "The Age"
+        },
+        "published_at": "2025-12-01T18:22:08+00:00"
+    },
+    {
+        "title": "ASX set to advance, crypto slump threatens Wall Street’s streak",
+        "description": "US stocks are giving back some of last week’s rally on Monday as bitcoin falls again.",
+        "url": "https://www.smh.com.au/business/markets/asx-set-to-advance-crypto-slump-threatens-wall-street-s-streak-20251202-p5njze.html?ref=rss&utm_medium=rss&utm_source=rss_business",
+        "source": {
+            "name": "The Sydney Morning Herald"
+        },
+        "published_at": "2025-12-01T18:22:08+00:00"
     }
 ]
